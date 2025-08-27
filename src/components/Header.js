@@ -106,8 +106,8 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="max-w-full  mx-auto px-48 py-1">
-        <div className="flex justify-between ">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-1">
+        <div className="flex justify-between items-center">
           {/* Logo */}
           <div className='flex items-center'>
             <div className="flex items-center">
@@ -165,7 +165,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Right Side Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-2 xl:space-x-4">
             {/* Search Icon */}
             <button className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,7 +181,7 @@ const Header = () => {
             </button>
 
             {/* Login Text */}
-            <button className="px-4 py-2 text-gray-700 hover:text-gray-900 transition-colors font-medium">
+            <button className="px-3 xl:px-4 py-2 text-gray-700 hover:text-gray-900 transition-colors font-medium text-sm xl:text-base">
               Login
             </button>
 
@@ -189,12 +189,12 @@ const Header = () => {
             <div className="w-px h-6 bg-gray-300"></div>
 
             {/* Try a demo Button */}
-            <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all duration-200 font-medium">
+            <button className="px-3 xl:px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all duration-200 font-medium text-sm xl:text-base">
               Try a demo
             </button>
 
             {/* Create account Button */}
-            <button className="px-6 py-2 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all duration-200 shadow-sm">
+            <button className="px-4 xl:px-6 py-2 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all duration-200 shadow-sm text-sm xl:text-base">
               Create account
             </button>
           </div>
@@ -236,10 +236,10 @@ const Header = () => {
           />
 
           {/* Mobile Menu Panel */}
-          <div className="fixed right-0 top-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out">
+          <div className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-xl transform transition-transform duration-300 ease-in-out">
             <div className="flex flex-col h-full">
               {/* Mobile Menu Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200">
                 <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
                 <button
                   onClick={closeMobileMenu}
@@ -257,7 +257,7 @@ const Header = () => {
                   <div key={item.key} className="border-b border-gray-100">
                     <button
                       onClick={() => setActiveDropdown(activeDropdown === item.key ? null : item.key)}
-                      className="w-full px-6 py-4 text-left flex items-center justify-between text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+                      className="w-full px-4 sm:px-6 py-4 text-left flex items-center justify-between text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors"
                     >
                       <span className="font-medium">{item.label}</span>
                       <svg
@@ -272,7 +272,7 @@ const Header = () => {
 
                     {/* Mobile Dropdown Content */}
                     {activeDropdown === item.key && (
-                      <div className="bg-gray-50 px-6 py-2">
+                      <div className="bg-gray-50 px-4 sm:px-6 py-2">
                         {dropdownData[item.key].map((dropdownItem, index) => (
                           <div
                             key={index}
@@ -300,7 +300,7 @@ const Header = () => {
               </div>
 
               {/* Mobile Menu Footer */}
-              <div className="p-6 border-t border-gray-200 space-y-3">
+              <div className="p-4 sm:p-6 border-t border-gray-200 space-y-3">
                 <button className="w-full px-4 py-2 text-gray-700 hover:text-gray-900 transition-colors font-medium">
                   Login
                 </button>

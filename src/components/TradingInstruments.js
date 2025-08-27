@@ -181,21 +181,21 @@ const TradingInstruments = () => {
   );
 
   return (
-    <section className="bg-gray-50 py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-gray-50 py-12 sm:py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header Section */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <span className="inline-block bg-gray-100 text-black text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wide mb-4">Instruments</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8">Discover over 10100 trading possibilities</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 sm:mb-8 px-2">Discover over 10100 trading possibilities</h2>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-col items-center gap-4 mb-8">
-            <button className="px-8 py-4 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <div className="flex flex-col sm:flex-row items-center gap-4 mb-6 sm:mb-8">
+            <button className="px-6 sm:px-8 py-3 sm:py-4 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base">
               Create account
             </button>
-            <button className="text-green-600 font-semibold text-lg hover:text-green-700 flex items-center justify-center group transition-colors duration-300">
+            <button className="text-green-600 font-semibold text-sm sm:text-base lg:text-lg hover:text-green-700 flex items-center justify-center group transition-colors duration-300">
               Full instruments list
-              <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
             </button>
@@ -203,11 +203,11 @@ const TradingInstruments = () => {
         </div>
 
         {/* Main Card with Search, Tabs, and Instruments */}
-        <div className="bg-white rounded-3xl border overflow-hidden">
+        <div className="bg-white rounded-2xl sm:rounded-3xl border overflow-hidden">
           {/* Search Bar */}
-          <div className="p-2 border-b border-gray-100">
+          <div className="p-2 sm:p-4 border-b border-gray-100">
             <div className="relative w-full">
-              <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <input
@@ -215,19 +215,19 @@ const TradingInstruments = () => {
                 placeholder="Search through 10100+ instruments"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent shadow-sm"
+                className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent shadow-sm text-sm sm:text-base"
               />
             </div>
           </div>
 
           {/* Tabs */}
-          <div className="px-8 py-6 border-b border-gray-100">
-            <div className="flex justify-left space-x-8">
+          <div className="px-4 sm:px-8 py-4 sm:py-6 border-b border-gray-100">
+            <div className="flex flex-wrap justify-start sm:justify-left space-x-4 sm:space-x-8">
               {tabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`text-lg font-semibold pb-2 transition-all duration-300 ${activeTab === tab
+                  className={`text-sm sm:text-lg font-semibold pb-2 transition-all duration-300 ${activeTab === tab
                     ? 'text-gray-900 border-b-2 border-gray-900'
                     : 'text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-gray-300'
                     }`}
@@ -243,36 +243,36 @@ const TradingInstruments = () => {
             <table className="w-full">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-8 py-6 text-left text-sm font-semibold text-gray-900"></th>
-                  <th className="px-8 py-6 text-right text-sm font-semibold text-gray-900">Change</th>
-                  <th className="px-8 py-6 text-right text-sm font-semibold text-gray-900">Sell</th>
-                  <th className="px-8 py-6 text-right text-sm font-semibold text-gray-900">Buy</th>
+                  <th className="px-4 sm:px-8 py-4 sm:py-6 text-left text-xs sm:text-sm font-semibold text-gray-900"></th>
+                  <th className="px-2 sm:px-8 py-4 sm:py-6 text-right text-xs sm:text-sm font-semibold text-gray-900">Change</th>
+                  <th className="px-2 sm:px-8 py-4 sm:py-6 text-right text-xs sm:text-sm font-semibold text-gray-900">Sell</th>
+                  <th className="px-2 sm:px-8 py-4 sm:py-6 text-right text-xs sm:text-sm font-semibold text-gray-900">Buy</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 {filteredInstruments.map((instrument) => (
                   <tr key={instrument.id} className="hover:bg-gray-50 transition-colors duration-200">
-                    <td className="px-8 py-6">
-                      <div className="flex items-center space-x-4">
-                        <div className={`w-10 h-10 ${instrument.iconBg} rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-md`}>
+                    <td className="px-4 sm:px-8 py-4 sm:py-6">
+                      <div className="flex items-center space-x-3 sm:space-x-4">
+                        <div className={`w-8 h-8 sm:w-10 sm:h-10 ${instrument.iconBg} rounded-lg flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-md`}>
                           {instrument.icon}
                         </div>
-                        <div>
-                          <div className="font-semibold text-gray-900">{instrument.name}</div>
+                        <div className="min-w-0 flex-1">
+                          <div className="font-semibold text-gray-900 text-sm sm:text-base truncate">{instrument.name}</div>
                           <div className="flex items-center space-x-2 mt-1">
                             <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">{instrument.type}</span>
-                            <span className="text-sm text-gray-500">({instrument.symbol})</span>
+                            <span className="text-xs sm:text-sm text-gray-500 truncate">({instrument.symbol})</span>
                           </div>
                         </div>
                       </div>
                     </td>
-                    <td className={`px-8 py-6 text-right font-semibold ${instrument.changeColor}`}>
+                    <td className={`px-2 sm:px-8 py-4 sm:py-6 text-right font-semibold text-xs sm:text-sm ${instrument.changeColor}`}>
                       {instrument.change}
                     </td>
-                    <td className="px-8 py-6 text-right font-semibold text-gray-900">
+                    <td className="px-2 sm:px-8 py-4 sm:py-6 text-right font-semibold text-gray-900 text-xs sm:text-sm">
                       {instrument.sell}
                     </td>
-                    <td className="px-8 py-6 text-right font-semibold text-gray-900">
+                    <td className="px-2 sm:px-8 py-4 sm:py-6 text-right font-semibold text-gray-900 text-xs sm:text-sm">
                       {instrument.buy}
                     </td>
                   </tr>
