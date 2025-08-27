@@ -5,11 +5,11 @@ const InvestmentPlans = () => {
     <section className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <span className="text-sm text-gray-500 uppercase tracking-wide">Solutions</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold mt-2 text-gray-900">Learn of the newest possibilities</h2>
+          <span className="text-sm uppercase font-medium tracking-wide bg-gray-100 px-2 rounded-full">Solutions</span>
+          <h2 className="text-4xl md:text-5xl font-bold mt-2 text-gray-900">Learn of the newest possibilities</h2>
         </div>
 
-        <div className="bg-gray-50 rounded-3xl p-12 shadow-lg">
+        <div className="bg-gray-50 rounded-3xl p-6 shadow-lg">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
             <div>

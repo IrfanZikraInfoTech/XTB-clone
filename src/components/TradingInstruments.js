@@ -38,10 +38,10 @@ const TradingInstruments = () => {
         type: 'CFD',
         icon: 'Au',
         iconBg: 'bg-yellow-500',
-        change: '-0.45%',
+        change: '-0.51%',
         changeColor: 'text-red-600',
-        sell: '3378.74 USD',
-        buy: '3378.41 USD'
+        sell: '3376.62 USD',
+        buy: '3376.29 USD'
       },
       {
         id: 4,
@@ -52,7 +52,7 @@ const TradingInstruments = () => {
         iconBg: 'bg-gray-600',
         change: '-0.32%',
         changeColor: 'text-red-600',
-        sell: '66.57 USD',
+        sell: '66.56 USD',
         buy: '66.52 USD'
       },
       {
@@ -62,10 +62,10 @@ const TradingInstruments = () => {
         type: 'CFD',
         icon: '🔥',
         iconBg: 'bg-blue-400',
-        change: '-0.89%',
+        change: '-1.58%',
         changeColor: 'text-red-600',
-        sell: '2.8 USD',
-        buy: '2.796 USD'
+        sell: '2.781 USD',
+        buy: '2.777 USD'
       },
       {
         id: 6,
@@ -74,10 +74,10 @@ const TradingInstruments = () => {
         type: 'CFD',
         icon: '🇺🇸',
         iconBg: 'bg-blue-600',
-        change: '-0.08%',
+        change: '-0.01%',
         changeColor: 'text-red-600',
-        sell: '23590.55 USD',
-        buy: '23589.01 USD'
+        sell: '23605.5 USD',
+        buy: '23604.46 USD'
       }
     ],
     Stocks: [
@@ -185,60 +185,65 @@ const TradingInstruments = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <span className="inline-block bg-gray-200 text-gray-600 text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wide mb-4">Instruments</span>
+          <span className="inline-block bg-gray-100 text-black text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wide mb-4">Instruments</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8">Discover over 10100 trading possibilities</h2>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <button className="px-8 py-4 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <div className="flex flex-col items-center gap-4 mb-8">
+            <button className="px-8 py-4 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
               Create account
             </button>
-            <button className="text-green-600 font-semibold text-lg hover:text-green-700 flex items-center justify-center group">
+            <button className="text-green-600 font-semibold text-lg hover:text-green-700 flex items-center justify-center group transition-colors duration-300">
               Full instruments list
-              <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
             </button>
           </div>
+        </div>
 
+        {/* Main Card with Search, Tabs, and Instruments */}
+        <div className="bg-white rounded-3xl border overflow-hidden">
           {/* Search Bar */}
-          <div className="relative max-w-md mx-auto mb-8">
-            <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <input
-              type="text"
-              placeholder="Search through 10100+ instruments"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent shadow-sm"
-            />
+          <div className="p-2 border-b border-gray-100">
+            <div className="relative w-full">
+              <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search through 10100+ instruments"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent shadow-sm"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Tabs */}
-        <div className="flex justify-center space-x-8 mb-8">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`text-lg font-semibold pb-2 transition-all duration-300 ${activeTab === tab
-                ? 'text-gray-900 border-b-2 border-gray-900'
-                : 'text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-gray-300'
-                }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+          {/* Tabs */}
+          <div className="px-8 py-6 border-b border-gray-100">
+            <div className="flex justify-left space-x-8">
+              {tabs.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`text-lg font-semibold pb-2 transition-all duration-300 ${activeTab === tab
+                    ? 'text-gray-900 border-b-2 border-gray-900'
+                    : 'text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-gray-300'
+                    }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+          </div>
 
-        {/* Instruments List */}
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+          {/* Instruments List */}
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-8 py-6 text-left text-sm font-semibold text-gray-900">Instrument</th>
+                  <th className="px-8 py-6 text-left text-sm font-semibold text-gray-900"></th>
                   <th className="px-8 py-6 text-right text-sm font-semibold text-gray-900">Change</th>
                   <th className="px-8 py-6 text-right text-sm font-semibold text-gray-900">Sell</th>
                   <th className="px-8 py-6 text-right text-sm font-semibold text-gray-900">Buy</th>

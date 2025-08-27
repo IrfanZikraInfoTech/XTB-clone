@@ -9,6 +9,7 @@ import MobileAppSection from './components/MobileAppSection';
 import TradingInstruments from './components/TradingInstruments';
 import EducationSection from './components/EducationSection';
 import SupportSection from './components/SupportSection';
+import ClientSection from './components/ClientSection';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import FloatingChatButton from './components/FloatingChatButton';
@@ -28,6 +29,7 @@ function App() {
         <EducationSection />
         <SupportSection />
         <FAQSection />
+        <ClientSection />
         <Footer />
         <FloatingChatButton />
       </div>

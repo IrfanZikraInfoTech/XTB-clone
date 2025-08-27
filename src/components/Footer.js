@@ -32,7 +32,7 @@ const Footer = () => {
               <li><button onClick={(e) => handleInternalLink(e, 'commodities')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">CFDs on Commodities</button></li>
               <li><button onClick={(e) => handleInternalLink(e, 'investment-plans')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Investment Plans</button></li>
               <li><button onClick={(e) => handleInternalLink(e, 'account-fees')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Account and Fees</button></li>
-              <li><button onClick={(e) => handleInternalLink(e, 'instrument-specification')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Instrument specification</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'instrument-specification')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Instrument specification</button></li>npm run 
             </ul>
           </div>
 

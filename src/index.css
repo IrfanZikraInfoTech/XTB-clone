@@ -10,3 +10,65 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Custom animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Border line animation */
+@keyframes border-line {
+  0% {
+    transform: translateX(0) translateY(0);
+    width: 8px;
+    height: 2px;
+  }
+  25% {
+    transform: translateX(calc(100% - 8px)) translateY(0);
+    width: 8px;
+    height: 2px;
+  }
+  25.1% {
+    transform: translateX(calc(100% - 2px)) translateY(0);
+    width: 2px;
+    height: 8px;
+  }
+  50% {
+    transform: translateX(calc(100% - 2px)) translateY(calc(100% - 8px));
+    width: 2px;
+    height: 8px;
+  }
+  50.1% {
+    transform: translateX(calc(100% - 8px)) translateY(calc(100% - 2px));
+    width: 8px;
+    height: 2px;
+  }
+  75% {
+    transform: translateX(0) translateY(calc(100% - 2px));
+    width: 8px;
+    height: 2px;
+  }
+  75.1% {
+    transform: translateX(0) translateY(calc(100% - 8px));
+    width: 2px;
+    height: 8px;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    width: 2px;
+    height: 8px;
+  }
+}
+
+.animate-border-line {
+  animation: border-line 2s linear infinite;
+}

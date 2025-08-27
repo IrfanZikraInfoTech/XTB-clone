@@ -4,12 +4,12 @@ const TrustSection = () => {
   return (
     <section className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-gray-900 rounded-3xl p-12 shadow-2xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Award and Call to Action */}
-            <div>
+        <div className="bg-black rounded-3xl p-12 shadow-2xl">
+          <div className="grid md:grid-cols-3 gap-12 items-center">
+            {/* Left Column - Award and Call to Action (Wider) */}
+            <div className="md:col-span-2">
               {/* Trust Tag */}
-              <span className="inline-block bg-gray-300 text-gray-800 text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wide mb-6">Trust</span>
+              <span className="inline-block text-gray-400 border-gray-400 border text-xs font-medium px-2 py-1 rounded-full uppercase tracking-wide mb-6">Trust</span>
 
               {/* Award Title with Trophy */}
               <div className="flex items-start space-x-4 mb-8">
@@ -64,7 +64,7 @@ const TrustSection = () => {
                   {/* Green accent line */}
                   <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-500 rounded-full"></div>
                   <div className="pl-6">
-                    <div className="text-3xl font-bold text-white mb-2">20+</div>
+                    <div className="text-2xl font-bold text-white mb-1">20+</div>
                     <div className="text-gray-300 text-sm">Years on the market with XTB Group</div>
                   </div>
                 </div>
@@ -73,25 +73,22 @@ const TrustSection = () => {
                   {/* Green accent line */}
                   <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-500 rounded-full"></div>
                   <div className="pl-6">
-                    <div className="text-3xl font-bold text-white mb-2">FSC</div>
+                    <div className="text-2xl font-bold text-white mb-1">FSC</div>
                     <div className="text-gray-300 text-sm">Regulated by authorities</div>
                   </div>
                 </div>
               </div>
 
               {/* Row 3 */}
-              <div className="grid grid-cols-2 gap-8">
+              <div className="space-y-4">
                 <div className="relative">
                   {/* Green accent line */}
                   <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-500 rounded-full"></div>
                   <div className="pl-6">
-                    <div className="text-3xl font-bold text-white mb-2">2FA</div>
+                    <div className="text-2xl font-bold text-white mb-1">2FA</div>
                     <div className="text-gray-300 text-sm">Secure Two Factor Authentication login</div>
                   </div>
                 </div>
-
-                {/* Empty space to maintain grid structure */}
-                <div></div>
               </div>
             </div>
           </div>
