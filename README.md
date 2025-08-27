@@ -143,6 +143,53 @@ npm run build
 
 This creates an optimized production build in the `build/` folder.
 
+## 🚀 Deploy to Vercel
+
+This React app is optimized for deployment on Vercel. Here are the deployment options:
+
+### Quick Deploy with Vercel Dashboard
+
+1. **Push your code to GitHub**
+   ```bash
+   git add .
+   git commit -m "Ready for Vercel deployment"
+   git push origin main
+   ```
+
+2. **Deploy on Vercel**
+   - Go to [vercel.com](https://vercel.com)
+   - Sign up/Login with GitHub
+   - Click "New Project"
+   - Import your repository
+   - Click "Deploy"
+
+### Deploy with Vercel CLI
+
+1. **Install Vercel CLI**
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Deploy**
+   ```bash
+   vercel login
+   vercel
+   ```
+
+### Automatic Deployments
+
+- Every push to `main` branch triggers automatic deployment
+- Preview deployments for pull requests
+- Custom domain support
+- SSL certificate included
+
+### Performance Features
+
+- **Edge Network**: Global CDN for fast loading
+- **Automatic Optimization**: Image and asset optimization
+- **Caching**: Static assets cached for better performance
+- **Analytics**: Built-in performance monitoring
+
 ## 🌟 Key Features
 
 - **Professional Design**: Clean, modern trading platform aesthetic

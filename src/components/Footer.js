@@ -1,6 +1,14 @@
 import React from 'react';
 
 const Footer = () => {
+  const handleInternalLink = (e, section) => {
+    e.preventDefault();
+    // For now, just scroll to top or show a message
+    // In a real app, you'd use React Router for navigation
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    console.log(`Navigating to ${section} section`);
+  };
+
   return (
     <footer className="bg-white text-gray-800 py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -17,14 +25,14 @@ const Footer = () => {
           <div>
             <h3 className="text-gray-900 font-bold mb-4">Invest</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Stocks</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">ETFs</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">CFDs on Forex</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">CFDs on Indices</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">CFDs on Commodities</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Investment Plans</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Account and Fees</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Instrument specification</a></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'stocks')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Stocks</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'etfs')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">ETFs</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'forex')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">CFDs on Forex</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'indices')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">CFDs on Indices</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'commodities')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">CFDs on Commodities</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'investment-plans')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Investment Plans</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'account-fees')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Account and Fees</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'instrument-specification')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Instrument specification</button></li>
             </ul>
           </div>
 
@@ -32,10 +40,10 @@ const Footer = () => {
           <div>
             <h3 className="text-gray-900 font-bold mb-4">Education</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Educational articles</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Market analysis</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Market calendar</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Help center</a></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'educational-articles')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Educational articles</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'market-analysis')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Market analysis</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'market-calendar')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Market calendar</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'help-center')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Help center</button></li>
             </ul>
           </div>
 
@@ -43,10 +51,10 @@ const Footer = () => {
           <div>
             <h3 className="text-gray-900 font-bold mb-4">About us</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">The company</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Ambassador</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Trading Platform</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Contact</a></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'company')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">The company</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'ambassador')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Ambassador</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'trading-platform')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Trading Platform</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'contact')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Contact</button></li>
             </ul>
           </div>
 
@@ -54,10 +62,10 @@ const Footer = () => {
           <div>
             <h3 className="text-gray-900 font-bold mb-4">Investor relations</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">News</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Reports</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Share Price</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">ESG</a></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'news')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">News</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'reports')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Reports</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'share-price')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Share Price</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'esg')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">ESG</button></li>
             </ul>
           </div>
 
@@ -65,12 +73,12 @@ const Footer = () => {
           <div>
             <h3 className="text-gray-900 font-bold mb-4">LEGAL</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Legal information</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Regulations</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Risk Disclaimer</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Complaints procedure</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 transition">Company News</a></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'legal-information')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Legal information</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'privacy-policy')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Privacy Policy</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'regulations')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Regulations</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'risk-disclaimer')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Risk Disclaimer</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'complaints-procedure')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Complaints procedure</button></li>
+              <li><button onClick={(e) => handleInternalLink(e, 'company-news')} className="text-gray-600 hover:text-gray-900 transition text-left w-full">Company News</button></li>
             </ul>
           </div>
         </div>
@@ -78,31 +86,31 @@ const Footer = () => {
         {/* Horizontal Links Section */}
         <div className="flex flex-wrap items-center justify-between mb-8 pb-8 border-b border-gray-200">
           <div className="flex flex-wrap items-center space-x-8">
-            <a href="#" className="text-gray-600 hover:text-gray-900 transition flex items-center group">
+            <button onClick={(e) => handleInternalLink(e, 'partnerships')} className="text-gray-600 hover:text-gray-900 transition flex items-center group">
               Partnerships
               <svg className="w-4 h-4 ml-1 text-green-600 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 transition flex items-center group">
+            </button>
+            <button onClick={(e) => handleInternalLink(e, 'xopenhub')} className="text-gray-600 hover:text-gray-900 transition flex items-center group">
               XOpenHub.pro
               <svg className="w-4 h-4 ml-1 text-green-600 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 transition flex items-center group">
+            </button>
+            <button onClick={(e) => handleInternalLink(e, 'client-office')} className="text-gray-600 hover:text-gray-900 transition flex items-center group">
               Client office
               <svg className="w-4 h-4 ml-1 text-green-600 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </a>
+            </button>
           </div>
 
           {/* Web App Link */}
-          <a href="#" className="text-gray-600 hover:text-gray-900 transition flex items-center group">
+          <button onClick={(e) => handleInternalLink(e, 'web-app')} className="text-gray-600 hover:text-gray-900 transition flex items-center group">
             <div className="w-3 h-3 bg-green-500 rounded mr-2"></div>
             Web app
-          </a>
+          </button>
         </div>
 
         {/* Legal Disclaimers */}
@@ -138,7 +146,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center justify-between">
             <p>Copyright 2025 © XTB S.A.</p>
-            <a href="#" className="text-green-600 hover:text-green-700 transition-colors">• Cookies settings</a>
+            <button onClick={(e) => handleInternalLink(e, 'cookies-settings')} className="text-green-600 hover:text-green-700 transition-colors">• Cookies settings</button>
           </div>
         </div>
       </div>
