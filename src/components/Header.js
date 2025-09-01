@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const dropdownData = {
     invest: [
@@ -110,7 +112,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className='flex items-center'>
-            <div className="flex items-center">
+            <div className="flex items-center cursor-pointer" onClick={() => navigate('/')}>
               <img src="/logo_xtb.svg" alt="XTB Logo" className="h-6 w-auto" />
             </div>
 
@@ -140,6 +142,18 @@ const Header = () => {
                           <div
                             key={index}
                             className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors duration-200"
+                            onClick={() => {
+                              if (item.key === 'about' && dropdownItem.title === 'Contact') {
+                                navigate('/contact');
+                                setActiveDropdown(null);
+                              } else if (item.key === 'about' && dropdownItem.title === 'Ambassador') {
+                                navigate('/ambassador');
+                                setActiveDropdown(null);
+                              } else if (item.key === 'about' && dropdownItem.title === 'The Company') {
+                                navigate('/company');
+                                setActiveDropdown(null);
+                              }
+                            }}
                           >
                             <div className="flex items-start space-x-3">
                               <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-lg">
@@ -277,6 +291,18 @@ const Header = () => {
                           <div
                             key={index}
                             className="py-3 border-b border-gray-100 last:border-b-0"
+                            onClick={() => {
+                              if (item.key === 'about' && dropdownItem.title === 'Contact') {
+                                navigate('/contact');
+                                closeMobileMenu();
+                              } else if (item.key === 'about' && dropdownItem.title === 'Ambassador') {
+                                navigate('/ambassador');
+                                closeMobileMenu();
+                              } else if (item.key === 'about' && dropdownItem.title === 'The Company') {
+                                navigate('/company');
+                                closeMobileMenu();
+                              }
+                            }}
                           >
                             <div className="flex items-start space-x-3">
                               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-lg shadow-sm">
